@@ -1,6 +1,14 @@
 'use strict';
 
 var React = require('react-native');
-var Feed = require('./feed');
+// var Feed = require('./feed');
 
-React.AppRegistry.registerComponent('PanelsWidgetsNative', () => Feed);
+var Property = require('./property');
+
+class Demo extends React.Component {
+  render() {
+    return <Property.Card {...Property.cards()[0]} />;
+  }
+}
+
+React.AppRegistry.registerComponent('PanelsWidgetsNative', () => Demo);
