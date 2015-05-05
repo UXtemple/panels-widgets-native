@@ -1,6 +1,9 @@
 var { StyleSheet } = require('react-native');
 var { vw, vh, vmin, vmax } = require('react-native-viewport-units');
 
+var slideshowHeight = 30*vh;
+var propertyDataHeight = 20*vh; // slideshowHeight * 0.67;
+
 module.exports = StyleSheet.create({
   container: {
     flex: 1,
@@ -27,10 +30,13 @@ module.exports = StyleSheet.create({
     backgroundColor: '#E6E6E6',
     height: 1
   },
+  slideshow: {
+    height: slideshowHeight,
+    marginTop: 10
+  },
   image: {
     alignSelf: 'stretch',
-    height: 30*vh,
-    marginTop: 10
+    height: slideshowHeight
   },
   title: {
     color: '#333333',
@@ -54,7 +60,7 @@ module.exports = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20
   },
-  property: { 
+  property: {
     fontFamily: 'Roboto',
     color: '#6D6E71',
     fontSize: 14,
@@ -62,7 +68,8 @@ module.exports = StyleSheet.create({
     marginRight: 10
   },
   propertyData: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    height: propertyDataHeight
   },
   summary: {
     borderColor: 'red',
@@ -72,10 +79,14 @@ module.exports = StyleSheet.create({
   like: {
     borderColor: 'green',
     borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
     width: 20*vw
   },
   likeTest: {
     backgroundColor: '#E6E6E6',
+    borderColor: 'pink',
+    borderWidth: 1,
     width: 10,
     height: 20
   },
