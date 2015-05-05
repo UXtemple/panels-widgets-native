@@ -6,6 +6,7 @@
     "start": "node_modules/react-native/packager/packager.sh"
   },
   "dependencies": {
+    "numeral": "^1.5.3",
     "react-native": "^0.4.1",
     "react-native-viewport-units": "0.0.3"
   }
